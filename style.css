@@ -1,0 +1,725 @@
+/* ========================
+   General Reset & Basics
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding-top: 70px; /* مسافة فوق المحتوى لتجنب تراكب شريط التنقل */
+  margin: 0;
+}
+
+/* ========================
+   Header & Navigation
+======================== */
+.navbar {
+  position: fixed;      /* يجعل شريط التنقل ثابت في أعلى الصفحة */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;        /* لضمان ظهوره فوق باقي العناصر */
+  transition: background-color 0.3s ease;
+}
+
+/* Left - Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2d6a4f;
+  flex: 1;
+}
+
+/* Center - Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #2d6a4f;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1b4332;
+}
+
+/* Right - Buttons */
+.nav-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* signin Button */
+.btn.signin {
+  background-color: transparent;
+  color: #2d6a4f;
+  border-radius: 100px;
+}
+
+.btn.signin:hover {
+  color: #000000;
+}
+
+/* Sign Up Button */
+.btn.signup {
+  background-color: #ffffff;
+  color: #2d6a4f;
+  border: 2px solid #2d6a4f;
+  border-radius: 100px;
+}
+
+.btn.signup:hover {
+  background-color: #2d6a4f;
+  color: #ffffff;
+}
+
+/* ========================
+   Main Content
+======================== */
+main {
+  padding: 30px 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+
+main h2 {
+  font-size: 2rem;
+  color: #2d6a4f;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================
+   Images Section
+======================== */
+#images {
+  text-align: center;
+}
+
+#images figure {
+  display: inline-block;
+  margin: 15px;
+  width: 300px;
+}
+
+#images img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-feature figcaption {
+  max-width: 700px;
+}
+
+.image-feature h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #2d6a4f;
+}
+
+.image-feature p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.image-feature {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .image-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-feature img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .image-feature figcaption {
+    max-width: 100%;
+  }
+}
+
+/* ========================
+   Articles Section
+======================== */
+section:nth-of-type(3) {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  background-color: #e9f0e7;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(45, 106, 79, 0.1);
+}
+
+section:nth-of-type(3) article {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(45, 106, 79, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:nth-of-type(3) article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(45, 106, 79, 0.15);
+}
+
+section:nth-of-type(3) article h3 {
+  font-size: 1.6rem;
+  color: #2d6a4f;
+  margin-bottom: 0.8rem;
+}
+
+section:nth-of-type(3) article p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive for Articles */
+@media (max-width: 768px) {
+  section:nth-of-type(3) {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  section:nth-of-type(3) article {
+    padding: 1rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Individual Article Styling */
+article {
+  background-color: #f0f9f4;
+  margin: 15px 0;
+  padding: 20px;
+  border-left: 5px solid #2d6a4f;
+  border-radius: 8px;
+}
+
+article h3 {
+  color: #1b4332;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+/* ========================
+   Video Section
+======================== */
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ========================
+   Forms Styling
+======================== */
+
+/* Sign Up Call to Action */
+form {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+form button {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #1b4332;
+}
+
+/* Form buttons inside main */
+main form button[type="submit"] {
+  background-color: transparent;
+  color: #2d6a4f;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #2d6a4f;
+  border-radius: 100px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main form button:hover {
+  background-color: #2d6a4f;
+  color: white;
+}
+
+/* ===== Contact Form (مثل نموذج التسجيل) ===== */
+.contact-form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contact-form .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-form .form-group label {
+  min-width: 150px;
+  margin-right: 25px;
+  font-weight: 600;
+  color: #2d6a4f;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  border-color: #2d6a4f;
+  outline: none;
+}
+
+/* Submit Button Contact Form */
+.contact-form button[type="submit"] {
+  background-color: #2d6a4f;
+  color: white;
+  font-weight: 700;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  width: 250px;
+  margin-top: 10px;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #1b422b;
+}
+
+/* Responsive Contact Form */
+@media (max-width: 600px) {
+  .contact-form .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-form .form-group label {
+    margin-bottom: 8px;
+  }
+
+  .contact-form button[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* ========================
+   Signup Form Section
+======================== */
+.signup-coun {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Signup Header */
+.signup-header {
+  background-color: #2d6a4f;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-header h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+/* Signup Form Groups */
+.signup-form .form-group:not(.row-group) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.signup-form .form-group:not(.row-group) label {
+  min-width: 150px;
+  margin-right: 25px;
+  font-weight: 600;
+  color: #2d6a4f;
+}
+
+.signup-form .form-group:not(.row-group) input {
+  width: 250px; /* عرض ثابت */
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.signup-form .form-group:not(.row-group) input:focus {
+  border-color: #2d6a4f;
+  outline: none;
+}
+
+/* Gender and Terms Styling */
+.signup-form .row-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form .form-label {
+  width: 180px;
+  font-weight: bold;
+  color: #2d6a4f;
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+.signup-form .form-inline {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.signup-form .form-inline label {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.signup-form .form-inline input[type="checkbox"],
+.signup-form .form-inline input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Links for Terms */
+.signup-form .form-inline a {
+  color: #2d6a4f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-form .form-inline a:hover {
+  text-decoration: underline;
+}
+
+/* Signup Submit Button */
+.signup-form button[type="submit"] {
+  background-color: #2d6a4f;
+  color: white;
+  font-weight: 700;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 250px;
+}
+
+.signup-form button[type="submit"]:hover {
+  background-color: #1b422b;
+}
+
+/* ========================
+   Footer Section
+======================== */
+footer {
+  background-color: #2d6a4f;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #d4f1df;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer section {
+  margin-bottom: 15px;
+}
+
+/* ========================
+   Map Container Styling
+======================== */
+.map-container iframe {
+  display: block;
+  margin: 30px auto;
+  border: 3px solid #2d6a4f;
+  border-radius: 12px;
+  width: 90%;
+  height: 300px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ========================
+   Top Header Section (for Contact Page)
+======================== */
+.top-header {
+  background-color: #2d6a4f;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.top-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.top-header p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========================
+   Privacy Policy Page Styling
+======================== */
+.main-privacy {
+  padding: 40px 30px;
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  line-height: 1.75;
+}
+
+.main-privacy section {
+  margin-bottom: 2.5rem;
+}
+
+.main-privacy h2 {
+  font-size: 1.8rem;
+  color: #2d6a4f;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-left: 5px solid #2d6a4f;
+  padding-left: 12px;
+  letter-spacing: 0.02em;
+}
+
+.main-privacy p,
+.main-privacy li {
+  font-size: 1.1rem;
+  color: #555555;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.main-privacy ul {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  list-style-type: disc;
+}
+
+.main-privacy li {
+  margin-bottom: 0.8rem;
+}
+
+.main-privacy a {
+  color: #2d6a4f;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-bottom: 1.5px solid transparent;
+}
+
+.main-privacy a:hover {
+  color: #1b4332;
+  border-bottom-color: #1b4332;
+}
+
+/* Optional: add subtle spacing for long paragraphs */
+.main-privacy p + p {
+  margin-top: 1rem;
+}
+
+/* ========================
+   Login Page Styles
+======================== */
+.login-container {
+  max-width: 400px;
+  background-color: white;
+  margin: 60px auto 40px auto;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d6a4f;
+}
+
+.login-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2d6a4f;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #2d6a4f;
+  outline: none;
+}
+
+.login-form button[type="submit"] {
+  background-color: #2d6a4f;
+  color: white;
+  font-weight: 700;
+  padding: 12px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #1b422b;
+}
+
+.login-form .forgot-password {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.login-form .forgot-password a {
+  color: #2d6a4f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-form .forgot-password a:hover {
+  text-decoration: underline;
+}

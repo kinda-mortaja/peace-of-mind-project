@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css">
+
+  <title>Peace Of Mind | Sign Up</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="signup-header">
+        <h1>Peace of Mind</h1>
+    </header>
+
+
+    <!-- No navigation bar here -->
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="signup-coun">
+            <h2>Sign Up</h2>
+            <p>Sign up to receive our latest updates and offers.</p>
+
+            <form class="signup-form" action="login.html" method="get">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm your password" required>
+            </div>
+
+            <!-- Gender group (كما هو) -->
+            <div class="form-group row-group">
+                <label class="form-label">Gender:</label>
+                <div class="form-inline">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female" required> Female</label>
+                </div>
+            </div>
+
+            <div class="form-group row-group terms-group">
+            <label class="form-label">&nbsp;</label> <!-- فقط للمحاذاة -->
+                <div class="form-inline">
+                    <label>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the <a href="privacy.html" target="_blank">Terms and Conditions</a>
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Sign Up</button>
+
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Address: Gaza - Palestine</p>
+            <p>Phone: +970 599 589 265</p>
+            <p>Email: contact@peaceofmind.ps</p>
+        </section>
+
+        <section>
+            <h2>Follow Us</h2>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        </section>
+
+        <p>&copy; 2025 Peace of Mind. All rights reserved.</p>
+        <p><a href="privacy.html" target="_blank">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
